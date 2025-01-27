@@ -26,3 +26,4 @@ zinit light marlonrichert/zsh-autocomplete
 zinit light mollifier/anyframe
 zinit ice as"program" from"gh-r" mv"bat* -> bat" pick"bat/bat"
 zinit light sharkdp/bat
+zinit light zsh-users/zsh-syntax-highlighting
