@@ -11,19 +11,39 @@ source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-zinit light-mode for \
-    zdharma-continuum/zinit-annex-as-monitor \
-    zdharma-continuum/zinit-annex-bin-gem-node \
-    zdharma-continuum/zinit-annex-patch-dl \
-    zdharma-continuum/zinit-annex-rust
+# Load a few important annexes, with Turbo
+zinit ice wait'0' depth=1
+zinit light zdharma-continuum/zinit-annex-as-monitor
+zinit light zdharma-continuum/zinit-annex-bin-gem-node
+zinit light zdharma-continuum/zinit-annex-patch-dl
+zinit light zdharma-continuum/zinit-annex-rust
 
-zinit ice depth=1; zinit light romkatv/powerlevel10k
+# Powerlevel10k prompt
+zinit ice depth=1 wait'0'
+zinit light romkatv/powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# zsh-autosuggestions: Suggest commands as you type
+zinit ice wait'1' depth=1
 zinit light zsh-users/zsh-autosuggestions
+
+# zsh-autocomplete: Provides smart auto-completion
+zinit ice wait'2' depth=1
 zinit light marlonrichert/zsh-autocomplete
+
+# anyframe: Directory navigation
+zinit ice wait'3' depth=1
 zinit light mollifier/anyframe
-zinit ice as"program" from"gh-r" mv"bat* -> bat" pick"bat/bat"
+
+# bat: Syntax highlighting for cat command
+zinit ice as"program" from"gh-r" mv"bat* -> bat" pick"bat/bat" wait'4'
 zinit light sharkdp/bat
+
+# zsh-syntax-highlighting: Highlights valid commands
+zinit ice wait'5' depth=1
 zinit light zsh-users/zsh-syntax-highlighting
+
+# ディレクトリ移動履歴 (bindkey)
+bindkey '^xb' anyframe-widget-cdr
+autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+add-zsh-hook chpwd chpwd_recent_dirs
