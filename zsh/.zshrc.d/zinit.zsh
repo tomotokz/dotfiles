@@ -24,23 +24,23 @@ zinit light romkatv/powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # zsh-autosuggestions: Suggest commands as you type
-zinit ice wait'1' depth=1
+zinit ice wait'0' depth=1
 zinit light zsh-users/zsh-autosuggestions
 
 # zsh-autocomplete: Provides smart auto-completion
-zinit ice wait'2' depth=1
+zinit ice wait'0' depth=1
 zinit light marlonrichert/zsh-autocomplete
 
 # anyframe: Directory navigation
-zinit ice wait'3' depth=1
+zinit ice wait'0' depth=1
 zinit light mollifier/anyframe
 
 # bat: Syntax highlighting for cat command
-zinit ice as"program" from"gh-r" mv"bat* -> bat" pick"bat/bat" wait'4'
+zinit ice as"program" from"gh-r" mv"bat* -> bat" pick"bat/bat" wait'0'
 zinit light sharkdp/bat
 
 # zsh-syntax-highlighting: Highlights valid commands
-zinit ice wait'5' depth=1
+zinit ice wait'0' depth=1
 zinit light zsh-users/zsh-syntax-highlighting
 
 # ディレクトリ移動履歴 (bindkey)
