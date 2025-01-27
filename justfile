@@ -1,11 +1,15 @@
+apply-all:
+  just vscode-apply
+  just zsh-apply
+
 # dotfilesの内容をlocalに適用する
 vscode-apply:
-  sh vscode/settings/index.sh
-  sh vscode/extensions/apply.sh
+  bash vscode/settings/index.sh
+  bash vscode/extensions/apply.sh
 
 # localの内容をdotfilesに適用する
 vscode-save:
-  sh vscode/extensions/save.sh
+  bash vscode/extensions/save.sh
 
 zsh-apply:
-  sh zsh/index.sh
+  bash zsh/index.sh

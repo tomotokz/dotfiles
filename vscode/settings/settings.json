@@ -29,14 +29,19 @@
   "editor.smoothScrolling": true,
   "editor.wrappingIndent": "indent",
   "editor.dragAndDrop": false,
+  "editor.colorDecorators": true,
 
   "workbench.colorTheme": "Atom One Dark",
   "workbench.iconTheme": "vscode-icons",
   "workbench.colorCustomizations": {
+    "editor.selectionBackground": "#577cc580",
     "editor.lineHighlightBackground": "#1073cf2d",
     "editor.lineHighlightBorder": "#9fced11f",
+    "editor.findMatchHighlightBackground": "#3377ff80",
+    "editor.findMatchBackground": "#ae00ff",
     "gitDecoration.modifiedResourceForeground": "#E8A317",
-    "gitDecoration.untrackedResourceForeground": "#4CAF50"
+    "gitDecoration.untrackedResourceForeground": "#4CAF50",
+    "contrastActiveBorder": "#B0F010"
   },
   "workbench.editor.tabSizing": "shrink",
   "workbench.editor.enablePreview": false,
