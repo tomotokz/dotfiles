@@ -24,7 +24,6 @@ zinit light zdharma-continuum/zinit-annex-patch-dl
 zinit light zdharma-continuum/zinit-annex-rust
 
 # zsh-autosuggestions: Suggest commands as you type
-autoload -Uz compinit && compinit
 zinit ice wait'0' depth=1
 zinit light zsh-users/zsh-autosuggestions
 

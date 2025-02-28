@@ -27,6 +27,7 @@ zstyle ':completion:*' list-colors "${LS_COLORS}"
 PROMPT="%F{green}%n%f %F{cyan}%f:%F{blue}%~%f"$'\n'"%# "
 
 # zsh completion settings
+autoload -Uz compinit && compinit
 zstyle ':completion:*:commands' rehash 1
 zstyle ':completion:*:default' menu select=2
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' '+m:{[:upper:]}={[:lower:]}'
