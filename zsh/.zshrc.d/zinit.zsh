@@ -11,17 +11,17 @@ source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
+# Powerlevel10k prompt
+zinit ice depth=1
+zinit light romkatv/powerlevel10k
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 # Load a few important annexes, with Turbo
-zinit ice wait'0' depth=1
+zinit ice depth=1
 zinit light zdharma-continuum/zinit-annex-as-monitor
 zinit light zdharma-continuum/zinit-annex-bin-gem-node
 zinit light zdharma-continuum/zinit-annex-patch-dl
 zinit light zdharma-continuum/zinit-annex-rust
-
-# Powerlevel10k prompt
-zinit ice depth=1 wait'0'
-zinit light romkatv/powerlevel10k
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # zsh-autosuggestions: Suggest commands as you type
 zinit ice wait'0' depth=1

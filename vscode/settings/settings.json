@@ -129,12 +129,22 @@
     }
   ],
   "[latex]": {
-    "editor.defaultFormatter": "James-Yu.latex-workshop"
+    "editor.defaultFormatter": "James-Yu.latex-workshop",
+    "editor.tabSize": 2
   },
   "latex-workshop.formatting.latex": "latexindent",
-  "latex-workshop.formatting.latexindent.args": ["%TMPFILE%", "-c=%DIR%/"],
+  "latex-workshop.formatting.latexindent.path": "latexindent",
+  "latex-workshop.formatting.latexindent.args": [
+    "%TMPFILE%",
+    "-c=%OUTDIR%",
+    "-g=%DOCFILE%-indent.log",
+    "-r",
+    "-l",
+    "-y=defaultIndent: '%INDENT%'"
+  ],
   "latex-workshop.linting.chktex.enabled": true,
   "latex-workshop.linting.run": "onType",
+  "latex-workshop.linting.chktex.exec.path": "chktex",
   "latex-workshop.linting.chktex.exec.args": [
     "-wall",
     "-n22",
@@ -143,8 +153,15 @@
     "-n19",
     "-n24",
     "-n26",
-    "-q"
+    "-q",
+    "-d 4"
   ],
+  "latex-workshop.linting.lacheck.exec.path": "lacheck",
+
+  "[bibtex]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "James-Yu.latex-workshop"
+  },
 
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
@@ -260,5 +277,7 @@
     "vscjava",
     "vsicons",
     "zinit"
-  ]
+  ],
+
+  "vsicons.dontShowNewVersionMessage": true
 }
