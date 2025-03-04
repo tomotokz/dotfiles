@@ -1,5 +1,6 @@
 # Alias settings
 alias py='python'
+alias upy='uv run python'
 alias vs="code -r main.py"
 alias test="pipenv run test"
 
