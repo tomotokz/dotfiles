@@ -60,14 +60,40 @@
   "files.autoGuessEncoding": true,
   "files.trimFinalNewlines": true,
 
+  "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontSize": 17,
   "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.shell.osx": "/opt/homebrew/bin/zsh",
+
   "terminal.integrated.cursorStyle": "underline",
   "terminal.integrated.smoothScrolling": true,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.enableImages": true,
   "terminal.integrated.mouseWheelZoom": true,
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "path": "bash",
+      "args": ["-l"],
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "/opt/homebrew/bin/zsh",
+      "args": ["-l"],
+      "icon": "terminal-zsh"
+    },
+    "fish": {
+      "path": "fish",
+      "args": ["-l"]
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    }
+  },
 
   "problems.decorations.enabled": true,
 
@@ -173,14 +199,8 @@
   "python.terminal.activateEnvironment": false,
   "python.defaultInterpreterPath": ".venv/bin/python",
 
-  "[notebook]": {
-    "editor.defaultFormatter": "charliermarsh.ruff",
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit",
-      "source.organizeImports": "explicit"
-    }
-  },
   "notebook.lineNumbers": "on",
+  "notebook.formatOnSave.enabled": true,
 
   "[java]": {
     "editor.defaultFormatter": "redhat.java"
